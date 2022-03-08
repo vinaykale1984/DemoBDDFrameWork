@@ -24,8 +24,26 @@ private AppiumDriver driver;
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@text='Accessibility']")).isDisplayed());
 	}
 
-	@When("Enter the username and password")
-	public void enter_the_username_and_password() {
+	@When("Click on Take the tour button")
+	public void click_on_Take_the_tour_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("User swipes to reach login page")
+	public void user_swipes_to_reach_login_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+	
+	@When("Enter the username")
+	public void enter_the_username() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("Enter the password")
+	public void enter_the_password() {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new cucumber.api.PendingException();
 	}
