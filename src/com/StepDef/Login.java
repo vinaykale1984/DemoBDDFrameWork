@@ -4,9 +4,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.appium.java_client.AppiumDriver;
+
+import org.openqa.selenium.By;
+import org.testng.Assert;
+
 import AppHook.Hook;
 
-public class Login {
+public class Login extends Hook {
 	
 private AppiumDriver driver;
 	
@@ -17,8 +21,7 @@ private AppiumDriver driver;
 	
 	@Given("User is on the landing page of the app")
 	public void user_is_on_the_landing_page_of_the_app() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@text='Accessibility']")).isDisplayed());
 	}
 
 	@When("Enter the username and password")

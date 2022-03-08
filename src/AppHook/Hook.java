@@ -75,10 +75,11 @@ public class Hook {
 	
 
 	@SuppressWarnings("rawtypes")
-	@Parameters({ "deviceName_","UDID_","platformVersion_", "URL_" })
+//	@Parameters({ "deviceName_","UDID_","platformVersion_", "URL_" })
 //	@BeforeMethod
 	@BeforeClass
-	public void beforemethod(String deviceName_,String UDID_,String platformVersion_, String URL_) throws MalformedURLException, InterruptedException{
+//	public void beforemethod(String deviceName_,String UDID_,String platformVersion_, String URL_) throws MalformedURLException, InterruptedException{
+	public void beforemethod() throws MalformedURLException, InterruptedException{
 		File f = new File("Testdata");
 		File fs = new File(f, "mywork_native_2.15.4_ANDROID_INT_UODPROD.apk");
 		
@@ -88,10 +89,10 @@ public class Hook {
 		 capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 //		 capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
 //		 capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-		 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName_);
-		 capabilities.setCapability(MobileCapabilityType.UDID, UDID_);
+		 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "OnePlus 6");
+		 capabilities.setCapability(MobileCapabilityType.UDID, "fdd1f933");
 		 capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-		 capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformVersion_);
+		 capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, 11);
 		 capabilities.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
 
 //		 capabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort_);
@@ -102,8 +103,8 @@ public class Hook {
 //		 new RemoteWebDriver(new URL("http://192.168.29.108:4444/wd/hub"), capabilities);
     
 
-//		 driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-		 driver = new AndroidDriver<MobileElement>(new URL("http://"+URL_), capabilities);
+		 driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+//		 driver = new AndroidDriver<MobileElement>(new URL("http://"+URL_), capabilities);
 		
 //		 utils = new Utils();
 //	     utils.delay(5000);
