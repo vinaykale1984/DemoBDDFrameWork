@@ -1,8 +1,9 @@
 package runner;
 
 import org.testng.annotations.Test;
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
 
 /**
@@ -15,10 +16,13 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features={"src//main//java//features"}
 					,glue={"stepdefinations","utility"}
-					,plugin = {"pretty", "html:target/cucumber"}
-					, tags ={"@appium"}
+					,plugin = {"pretty","json:target/cucumber.json"}
+					, tags ="@appium"
 		)
 @Test
 public class RunTest extends AbstractTestNGCucumberTests{
 
+	
+	//html:target/cucumber
+	//json:target/cucumber.json
 }

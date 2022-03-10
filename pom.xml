@@ -102,19 +102,22 @@
 		</dependency>
 
 
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>3.11.0</version>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>4.1.2</version>
 		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>7.4.0</version>
-			<scope>test</scope>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>7.5</version>
+		    <scope>test</scope>
 		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
 		<dependency>
@@ -156,18 +159,7 @@
 			<scope>provided</scope>
 		</dependency>
  -->
-		<dependency>
-			<groupId>com.codoid.products</groupId>
-			<artifactId>fillo</artifactId>
-			<version>1.16</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>3.0.0</version>
-		</dependency>
+		
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
@@ -182,24 +174,30 @@
 			<version>2.3.23</version>
 		</dependency>
 		
-		<dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
-    <version>4.2.0</version>
+    <version>7.2.3</version>
 </dependency>
 
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-testng</artifactId>
-    <version>4.2.0</version>   
+    <version>7.2.3</version>
 </dependency>
 
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-picocontainer</artifactId>
-    <version>4.2.0</version>
+    <version>7.2.3</version>
     <scope>test</scope>
 </dependency>
+
 
 <dependency>
     <groupId>io.cucumber</groupId>
@@ -209,19 +207,39 @@
 </dependency> 
 
 <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
-		<dependency>
-			<groupId>io.appium</groupId>
-			<artifactId>java-client</artifactId>
-			<version>7.5.1</version>
-		</dependency>
+<dependency>
+    <groupId>io.appium</groupId>
+    <artifactId>java-client</artifactId>
+    <version>8.0.0</version>
+</dependency>
+
 
 <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
 <dependency>
     <groupId>info.cukes</groupId>
     <artifactId>cucumber-picocontainer</artifactId>
-    <version>1.2.5</version>
+    <version>1.2.6</version>
+    <type>pom</type>
     <scope>test</scope>
 </dependency>
+
+
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.13.2</version>
+<scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<dependency>
+<groupId>io.cucumber</groupId>
+<artifactId>cucumber-junit</artifactId>
+<version>7.0.0</version>
+<scope>test</scope>
+</dependency>
+
 	</dependencies>
 
 

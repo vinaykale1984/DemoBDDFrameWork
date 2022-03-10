@@ -1,26 +1,39 @@
 package stepdefinations;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import utility.Hook;
-import utility.Pages;
-import utility.Pages.Direction;
+//import utility.Pages;
+//import utility.Pages.Direction;
 
 
-public class Login extends Pages{
+public class Login{
 	
-	public Login(AppiumDriver driver) {
-		super(driver);
-		
+	private AppiumDriver driver;
+
+//	public Login(AppiumDriver driver) {
+//		super(driver);
+//		
+//	}
+	
+	public Login() {
+		this.driver = Hook.getDriver();
 	}
 
-	private static  Direction RIGHT, LEFT, UP, DOWN;
+//	private static  Direction RIGHT, LEFT, UP, DOWN;
 
 	
 	
@@ -50,35 +63,105 @@ public class Login extends Pages{
 
 	@When("Click on Take the tour button")
 	public void click_on_Take_the_tour_button() {
-		clickByXpath(TakeTourBtn);
+		driver.findElement(By.xpath(TakeTourBtn)).click();
 		
 	}
 
 	@When("User swipes to reach login page")
 	public void user_swipes_to_reach_login_page() {
-		swipeScreen(RIGHT);
+//		swipeScreen(RIGHT);
 	}
 	
 	@When("Enter the username")
 	public void enter_the_username() {
-		writeText(UserNameBtn, UN);
+		driver.findElement(By.xpath(UserNameBtn)).sendKeys(UN);
 	}
 
 	@When("Enter the password")
 	public void enter_the_password() {
-		writeText(PwdBtn, PWD);
+		driver.findElement(By.xpath(PwdBtn)).sendKeys(PWD);
 	}
 
 	@When("Click on sign in button")
 	public void click_on_sign_in_button() {
-		clickByXpath(LoginBtn);
+		driver.findElement(By.xpath(LoginBtn)).click();
 	}
 
-//	@Then("User should navigate to homepage")
-//	public void user_should_navigate_to_homepage() {
-//	    // Write code here that turns the phrase above into concrete actions
+	@Then("User should navigate to homepage")
+	public void user_should_navigate_to_homepage() {
+	    // Write code here that turns the phrase above into concrete actions
 //	    throw new cucumber.api.PendingException();
+	}
+	
+	
+	
+	//Swipe functionality
+	
+//	public void swipeScreen(Direction dir) {
+//	    System.out.println("swipeScreen(): dir: '" + dir + "'"); // always log your actions
+//
+//	    // Animation default time:
+//	    //  - Android: 300 ms
+//	    //  - iOS: 200 ms
+//	    // final value depends on your app and could be greater
+//	    final int ANIMATION_TIME = 200; // ms
+//
+//	    final int PRESS_TIME = 200; // ms
+//
+//	    int edgeBorder = 10; // better avoid edges
+//	    PointOption pointOptionStart, pointOptionEnd;
+//
+//	    // init screen variables
+//	    Dimension dims = driver.manage().window().getSize();
+//
+//	    // init start point = center of screen
+//	    pointOptionStart = PointOption.point(dims.width / 2, dims.height / 2);
+//
+//	    switch (dir) {
+//	        case DOWN: // center of footer
+//	            pointOptionEnd = PointOption.point(dims.width / 2, dims.height - edgeBorder);
+//	            break;
+//	        case UP: // center of header
+//	            pointOptionEnd = PointOption.point(dims.width / 2, edgeBorder);
+//	            break;
+//	        case LEFT: // center of left side
+//	            pointOptionEnd = PointOption.point(edgeBorder, dims.height / 2);
+//	            break;
+//	        case RIGHT: // center of right side
+//	            pointOptionEnd = PointOption.point(dims.width - edgeBorder, dims.height / 2);
+//	            break;
+//	        default:
+//	            throw new IllegalArgumentException("swipeScreen(): dir: '" + dir + "' NOT supported");
+//	    }
+//
+//	    // execute swipe using TouchAction
+//	    try {
+//	        new TouchAction(driver)
+//	                .press(pointOptionStart)
+//	                // a bit more reliable when we add small wait
+//	                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(PRESS_TIME)))
+//	                .moveTo(pointOptionEnd)
+//	                .release().perform();
+//	    } catch (Exception e) {
+//	        System.err.println("swipeScreen(): TouchAction FAILED\n" + e.getMessage());
+//	        return;
+//	    }
+//
+//	    // always allow swipe action to complete
+//	    try {
+//	        Thread.sleep(ANIMATION_TIME);
+//	    } catch (InterruptedException e) {
+//	        // ignore
+//	    }
 //	}
+//
+//	public enum Direction {
+//	    UP,
+//	    DOWN,
+//	    LEFT,
+//	    RIGHT;
+//	}
+	
 	
 }
 
