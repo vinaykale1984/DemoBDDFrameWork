@@ -13,12 +13,12 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(features={"src//main//java//features"}
 					,glue={"stepdefinations","utility"}
 					,plugin = {"pretty","json:target/cucumber.json"}
-					, tags ="@appium"
+					
 		)
 @Test
 public class RunTest extends AbstractTestNGCucumberTests{
 
-	
+	//, tags ="@appium"
 	//html:target/cucumber
 	//json:target/cucumber.json
 }

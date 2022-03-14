@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-10T20:39:09 IST" name="Default suite" finished-at="2022-03-10T20:39:33 IST" duration-ms="24558">
+  <suite started-at="2022-03-14T09:56:10 IST" name="Default suite" finished-at="2022-03-14T09:57:30 IST" duration-ms="80162">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunTest@4802796d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunTest@34123d65]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-03-10T20:39:09 IST" name="Default test" finished-at="2022-03-10T20:39:33 IST" duration-ms="24558">
+    <test started-at="2022-03-14T09:56:10 IST" name="Default test" finished-at="2022-03-14T09:57:30 IST" duration-ms="80162">
       <class name="runner.RunTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.RunTest@4802796d]" started-at="2022-03-10T20:39:09 IST" name="setUpClass" finished-at="2022-03-10T20:39:09 IST" duration-ms="231" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.RunTest@34123d65]" started-at="2022-03-14T09:56:10 IST" name="setUpClass" finished-at="2022-03-14T09:56:11 IST" duration-ms="486" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4a2929a4]]>
+                <![CDATA[org.testng.TestRunner@65f651eb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunTest@4802796d]" started-at="2022-03-10T20:39:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-10T20:39:33 IST" duration-ms="24075" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunTest@34123d65]" started-at="2022-03-14T09:56:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-14T09:57:30 IST" duration-ms="79246" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,24 +34,26 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.UnsupportedCommandException">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
             <message>
-              <![CDATA[The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+              <![CDATA[Locator Strategy 'class' is not supported for this session
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
 Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: 'DESKTOP-LQ8JB3O', ip: '192.168.29.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'DESKTOP-LQ8JB3O', ip: '192.168.29.185', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [02ee54d6-d610-4b7c-acce-ded6d1f59a38, getTitle {}]
+Command: [23b660cb-b192-411e-8b15-c37d6b1f3f03, findElements {using=class, value=android.widget.TextView}]
 Capabilities {appium:app: C:\Users\Vinay Kale\Desktop..., appium:appActivity: com.mcdonalds.mcdcoreapp.co..., appium:appPackage: com.mcdonalds.superapp, appium:databaseEnabled: false, appium:desired: {app: C:\Users\Vinay Kale\Desktop..., appActivity: com.mcdonalds.mcdcoreapp.co..., appPackage: com.mcdonalds.superapp, platformName: android, udid: fdd1f933}, appium:deviceApiLevel: 30, appium:deviceManufacturer: OnePlus, appium:deviceModel: ONEPLUS A6000, appium:deviceName: fdd1f933, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: fdd1f933, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.8125, appium:platformVersion: 11, appium:statBarHeight: 80, appium:takesScreenshot: true, appium:udid: fdd1f933, appium:viewportRect: {height: 1986, left: 0, top: 80, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 02ee54d6-d610-4b7c-acce-ded6d1f59a38]]>
+Session ID: 23b660cb-b192-411e-8b15-c37d6b1f3f03]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnsupportedCommandException: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: Locator Strategy 'class' is not supported for this session
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
 Build info: version: '4.1.2', revision: '9a5a329c5a'
-System info: host: 'DESKTOP-LQ8JB3O', ip: '192.168.29.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+System info: host: 'DESKTOP-LQ8JB3O', ip: '192.168.29.185', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [02ee54d6-d610-4b7c-acce-ded6d1f59a38, getTitle {}]
+Command: [23b660cb-b192-411e-8b15-c37d6b1f3f03, findElements {using=class, value=android.widget.TextView}]
 Capabilities {appium:app: C:\Users\Vinay Kale\Desktop..., appium:appActivity: com.mcdonalds.mcdcoreapp.co..., appium:appPackage: com.mcdonalds.superapp, appium:databaseEnabled: false, appium:desired: {app: C:\Users\Vinay Kale\Desktop..., appActivity: com.mcdonalds.mcdcoreapp.co..., appPackage: com.mcdonalds.superapp, platformName: android, udid: fdd1f933}, appium:deviceApiLevel: 30, appium:deviceManufacturer: OnePlus, appium:deviceModel: ONEPLUS A6000, appium:deviceName: fdd1f933, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: fdd1f933, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.8125, appium:platformVersion: 11, appium:statBarHeight: 80, appium:takesScreenshot: true, appium:udid: fdd1f933, appium:viewportRect: {height: 1986, left: 0, top: 80, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 02ee54d6-d610-4b7c-acce-ded6d1f59a38
+Session ID: 23b660cb-b192-411e-8b15-c37d6b1f3f03
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -63,18 +65,19 @@ at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpRespo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
 at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:268)
-at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:332)
-at stepdefinations.Login.user_is_on_the_landing_page_of_the_app(Login.java:61)
-at ✽.User is on the landing page of the app(file:///C:/Users/Vinay%20Kale/Desktop/Automation/DemoBDDFrameWork/src/main/java/features/Login.feature:4)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:179)
+at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:108)
+at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:397)
+at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:389)
+at stepdefinations.Login.user_swipes_to_reach_login_page(Login.java:75)
+at ✽.User swipes to reach login page(file:///C:/Users/Vinay%20Kale/Desktop/Automation/DemoBDDFrameWork/src/main/java/features/Login.feature:7)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnsupportedCommandException -->
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.RunTest@4802796d]" started-at="2022-03-10T20:39:33 IST" name="tearDownClass" finished-at="2022-03-10T20:39:33 IST" duration-ms="213" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.RunTest@34123d65]" started-at="2022-03-14T09:57:30 IST" name="tearDownClass" finished-at="2022-03-14T09:57:30 IST" duration-ms="354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

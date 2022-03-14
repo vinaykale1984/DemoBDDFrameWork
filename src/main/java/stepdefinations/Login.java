@@ -9,10 +9,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import utility.Hook;
@@ -41,8 +43,8 @@ public class Login{
 	//*********Page Variables*********
 	
 	private String LandingScreen = "//android.view.ViewGroup[@resource-id = 'com.mcdonalds.superapp:id/tutorialLayout']";
-	private String TakeTourBtn  = "//android.widget.TextView[@resource-id = 'com.mcdonalds.superapp:id/loyalty_tutorial_welcome_tour']";
-	private String LoginBtn  = "//android.widget.TextView[@text = 'Login']";
+	private String SkipBtn  = "//android.widget.TextView[@resource-id = 'com.mcdonalds.superapp:id/toolbar_skip']";
+	private String LoginBtn  = "//android.widget.TextView[@resource-id = 'com.mcdonalds.superapp:id/tv_more_title']";
 	private String UserNameBtn = "//android.widget.EditText[@resource-id = 'com.mcdonalds.superapp:id/email_phone']";
 	private String PwdBtn = "//android.widget.EditText[@resource-id = 'com.mcdonalds.superapp:id/password']";
 	private String UN = "Vinay";
@@ -57,19 +59,24 @@ public class Login{
 	
 	
 	@Given("User is on the landing page of the app")
-	public String user_is_on_the_landing_page_of_the_app() {
-		return driver.getTitle();
+	public void user_is_on_the_landing_page_of_the_app() {
+		driver.findElement(By.xpath(LandingScreen)).isDisplayed();
 	}
 
-	@When("Click on Take the tour button")
-	public void click_on_Take_the_tour_button() {
-		driver.findElement(By.xpath(TakeTourBtn)).click();
-		
+	@When("Click on Skip button")
+	public void click_on_Skip_button() {
+		driver.findElement(By.xpath(SkipBtn)).click();
+		driver.findElement(By.xpath(SkipBtn)).click();
+		driver.findElement(By.xpath(SkipBtn)).click();
 	}
 
 	@When("User swipes to reach login page")
 	public void user_swipes_to_reach_login_page() {
-//		swipeScreen(RIGHT);
+	List <WebElement> myList = driver.findElements(By.className("android.widget.TextView"));
+	System.out.println(myList);
+	myList.get(0).click();
+	
+	myList.get(1).click();
 	}
 	
 	@When("Enter the username")
