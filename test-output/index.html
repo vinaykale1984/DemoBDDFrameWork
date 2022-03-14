@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Vinay Kale\AppData\Local\Temp\testng-eclipse--978617893\testng-customsuite.xml</span>
+                    <span>C:\Users\Vinay Kale\AppData\Local\Temp\testng-eclipse-1172332827\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="runner.RunTest" class="method navigator-link" hash-for-method="runScenario(&quot;Valid existing user access the application with invalid credentials&quot;, &quot;Optional[Login user validati...)">runScenario("Valid existing user access the application with invalid credentials", "Optional[Login user validati...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">runner.RunTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -131,43 +131,16 @@
                   </a> <!-- runScenario("Valid existing user access the application with invalid credentials", "Optional[Login user validati...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Valid existing user access the application with invalid credentials", "Optional[Login user validations]")</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: Locator Strategy &apos;class&apos; is not supported for this session
-For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
-Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;DESKTOP-LQ8JB3O&apos;, ip: &apos;192.168.29.185&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23b660cb-b192-411e-8b15-c37d6b1f3f03, findElements {using=class, value=android.widget.TextView}]
-Capabilities {appium:app: C:\Users\Vinay Kale\Desktop..., appium:appActivity: com.mcdonalds.mcdcoreapp.co..., appium:appPackage: com.mcdonalds.superapp, appium:databaseEnabled: false, appium:desired: {app: C:\Users\Vinay Kale\Desktop..., appActivity: com.mcdonalds.mcdcoreapp.co..., appPackage: com.mcdonalds.superapp, platformName: android, udid: fdd1f933}, appium:deviceApiLevel: 30, appium:deviceManufacturer: OnePlus, appium:deviceModel: ONEPLUS A6000, appium:deviceName: fdd1f933, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: fdd1f933, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.8125, appium:platformVersion: 11, appium:statBarHeight: 80, appium:takesScreenshot: true, appium:udid: fdd1f933, appium:viewportRect: {height: 1986, left: 0, top: 80, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 23b660cb-b192-411e-8b15-c37d6b1f3f03
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:179)
-	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:108)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:397)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:389)
-	at stepdefinations.Login.user_swipes_to_reach_login_page(Login.java:75)
-	at ✽.User swipes to reach login page(file:///C:/Users/Vinay%20Kale/Desktop/Automation/DemoBDDFrameWork/src/main/java/features/Login.feature:7)
-
-</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Vinay Kale\AppData\Local\Temp\testng-eclipse--978617893\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Vinay Kale\AppData\Local\Temp\testng-eclipse-1172332827\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -228,12 +201,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.RunTest')
-data.setCell(0, 3, 79246);
+data.setCell(0, 3, 29487);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -261,18 +234,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.RunTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@65f651eb)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@5b7c8930)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("Valid existing user access the application with invalid credentials", "Optional[Login user validati...)</span>
-                <span class="method-start">513 ms</span>
+                <span class="method-start">232 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">79773 ms</span>
+                <span class="method-start">29723 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

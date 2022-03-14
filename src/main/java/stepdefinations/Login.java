@@ -42,13 +42,14 @@ public class Login{
 
 	//*********Page Variables*********
 	
-	private String LandingScreen = "//android.view.ViewGroup[@resource-id = 'com.mcdonalds.superapp:id/tutorialLayout']";
-	private String SkipBtn  = "//android.widget.TextView[@resource-id = 'com.mcdonalds.superapp:id/toolbar_skip']";
-	private String LoginBtn  = "//android.widget.TextView[@resource-id = 'com.mcdonalds.superapp:id/tv_more_title']";
-	private String UserNameBtn = "//android.widget.EditText[@resource-id = 'com.mcdonalds.superapp:id/email_phone']";
-	private String PwdBtn = "//android.widget.EditText[@resource-id = 'com.mcdonalds.superapp:id/password']";
-	private String UN = "Vinay";
-	private String PWD = "Vinay";
+	private String LandingScreen = "//android.widget.TextView[@resource-id = 'com.mcdonalds.app.uk.dev:id/register']";
+//	private String SignIn  = "//android.widget.TextView[@resource-id = 'com.mcdonalds.app.uk.dev:id/save']";
+	private String SignIn  = "//android.widget.TextView[@content-desc = 'Log In button']";
+	private String LoginBtn  = "//android.widget.TextView[@resource-id = 'com.mcdonalds.app.uk.dev:id/login']";
+	private String UserNameBtn = "//android.widget.EditText[@resource-id = 'com.mcdonalds.app.uk.dev:id/email_phone']";
+	private String PwdBtn = "//android.widget.EditText[@resource-id = 'com.mcdonalds.app.uk.dev:id/password']";
+	private String UN = "philipstester2015@gmail.com";
+	private String PWD = "Star@123";
 	
 //	Direction dir = UP,DOWN,LEFT,RIGHT;
 	
@@ -60,23 +61,20 @@ public class Login{
 	
 	@Given("User is on the landing page of the app")
 	public void user_is_on_the_landing_page_of_the_app() {
-		driver.findElement(By.xpath(LandingScreen)).isDisplayed();
+//		driver.findElement(By.xpath(LandingScreen)).isDisplayed();
+		driver.findElement(By.xpath(LoginBtn)).click();
 	}
 
-	@When("Click on Skip button")
-	public void click_on_Skip_button() {
-		driver.findElement(By.xpath(SkipBtn)).click();
-		driver.findElement(By.xpath(SkipBtn)).click();
-		driver.findElement(By.xpath(SkipBtn)).click();
-	}
+//	@When("Click on Skip button")
+//	public void click_on_Skip_button() {
+//		driver.findElement(By.xpath(SkipBtn)).click();
+//		driver.findElement(By.xpath(SkipBtn)).click();
+//		driver.findElement(By.xpath(SkipBtn)).click();
+//	}
 
-	@When("User swipes to reach login page")
-	public void user_swipes_to_reach_login_page() {
-	List <WebElement> myList = driver.findElements(By.className("android.widget.TextView"));
-	System.out.println(myList);
-	myList.get(0).click();
-	
-	myList.get(1).click();
+	@When("Click on login button")
+	public void click_on_login_button() {
+		driver.findElement(By.xpath(LoginBtn)).click();
 	}
 	
 	@When("Enter the username")
@@ -89,9 +87,9 @@ public class Login{
 		driver.findElement(By.xpath(PwdBtn)).sendKeys(PWD);
 	}
 
-	@When("Click on sign in button")
-	public void click_on_sign_in_button() {
-		driver.findElement(By.xpath(LoginBtn)).click();
+	@When("Click on signin button")
+	public void click_on_signin_button(){
+		driver.findElement(By.xpath(SignIn)).click();
 	}
 
 	@Then("User should navigate to homepage")
@@ -102,72 +100,7 @@ public class Login{
 	
 	
 	
-	//Swipe functionality
 	
-//	public void swipeScreen(Direction dir) {
-//	    System.out.println("swipeScreen(): dir: '" + dir + "'"); // always log your actions
-//
-//	    // Animation default time:
-//	    //  - Android: 300 ms
-//	    //  - iOS: 200 ms
-//	    // final value depends on your app and could be greater
-//	    final int ANIMATION_TIME = 200; // ms
-//
-//	    final int PRESS_TIME = 200; // ms
-//
-//	    int edgeBorder = 10; // better avoid edges
-//	    PointOption pointOptionStart, pointOptionEnd;
-//
-//	    // init screen variables
-//	    Dimension dims = driver.manage().window().getSize();
-//
-//	    // init start point = center of screen
-//	    pointOptionStart = PointOption.point(dims.width / 2, dims.height / 2);
-//
-//	    switch (dir) {
-//	        case DOWN: // center of footer
-//	            pointOptionEnd = PointOption.point(dims.width / 2, dims.height - edgeBorder);
-//	            break;
-//	        case UP: // center of header
-//	            pointOptionEnd = PointOption.point(dims.width / 2, edgeBorder);
-//	            break;
-//	        case LEFT: // center of left side
-//	            pointOptionEnd = PointOption.point(edgeBorder, dims.height / 2);
-//	            break;
-//	        case RIGHT: // center of right side
-//	            pointOptionEnd = PointOption.point(dims.width - edgeBorder, dims.height / 2);
-//	            break;
-//	        default:
-//	            throw new IllegalArgumentException("swipeScreen(): dir: '" + dir + "' NOT supported");
-//	    }
-//
-//	    // execute swipe using TouchAction
-//	    try {
-//	        new TouchAction(driver)
-//	                .press(pointOptionStart)
-//	                // a bit more reliable when we add small wait
-//	                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(PRESS_TIME)))
-//	                .moveTo(pointOptionEnd)
-//	                .release().perform();
-//	    } catch (Exception e) {
-//	        System.err.println("swipeScreen(): TouchAction FAILED\n" + e.getMessage());
-//	        return;
-//	    }
-//
-//	    // always allow swipe action to complete
-//	    try {
-//	        Thread.sleep(ANIMATION_TIME);
-//	    } catch (InterruptedException e) {
-//	        // ignore
-//	    }
-//	}
-//
-//	public enum Direction {
-//	    UP,
-//	    DOWN,
-//	    LEFT,
-//	    RIGHT;
-//	}
 	
 	
 }

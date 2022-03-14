@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 14 09:56:10 IST 2022</td>
+<td>Started on:</td><td>Mon Mar 14 13:10:42 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>80 seconds (80162 ms)</td>
+<tr><td>Total time:</td><td>30 seconds (30117 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,60 +76,9 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.RunTest.runScenario()'><b>runScenario</b><br>Test class: runner.RunTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid existing user access the application with invalid credentials", "Optional[Login user validations]"</td>
-<td><div><pre>org.openqa.selenium.InvalidSelectorException: Locator Strategy &apos;class&apos; is not supported for this session
-For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
-Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;DESKTOP-LQ8JB3O&apos;, ip: &apos;192.168.29.185&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23b660cb-b192-411e-8b15-c37d6b1f3f03, findElements {using=class, value=android.widget.TextView}]
-Capabilities {appium:app: C:\Users\Vinay Kale\Desktop..., appium:appActivity: com.mcdonalds.mcdcoreapp.co..., appium:appPackage: com.mcdonalds.superapp, appium:databaseEnabled: false, appium:desired: {app: C:\Users\Vinay Kale\Desktop..., appActivity: com.mcdonalds.mcdcoreapp.co..., appPackage: com.mcdonalds.superapp, platformName: android, udid: fdd1f933}, appium:deviceApiLevel: 30, appium:deviceManufacturer: OnePlus, appium:deviceModel: ONEPLUS A6000, appium:deviceName: fdd1f933, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: fdd1f933, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.8125, appium:platformVersion: 11, appium:statBarHeight: 80, appium:takesScreenshot: true, appium:udid: fdd1f933, appium:viewportRect: {height: 1986, left: 0, top: 80, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 23b660cb-b192-411e-8b15-c37d6b1f3f03
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:179)
-	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:108)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:397)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:389)
-	at stepdefinations.Login.user_swipes_to_reach_login_page(Login.java:75)
-	at ?.User swipes to reach login page(file:///C:/Users/Vinay%20Kale/Desktop/Automation/DemoBDDFrameWork/src/main/java/features/Login.feature:7)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2189588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2189588'><pre>org.openqa.selenium.InvalidSelectorException: Locator Strategy &apos;class&apos; is not supported for this session
-For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
-Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;DESKTOP-LQ8JB3O&apos;, ip: &apos;192.168.29.185&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [23b660cb-b192-411e-8b15-c37d6b1f3f03, findElements {using=class, value=android.widget.TextView}]
-Capabilities {appium:app: C:\Users\Vinay Kale\Desktop..., appium:appActivity: com.mcdonalds.mcdcoreapp.co..., appium:appPackage: com.mcdonalds.superapp, appium:databaseEnabled: false, appium:desired: {app: C:\Users\Vinay Kale\Desktop..., appActivity: com.mcdonalds.mcdcoreapp.co..., appPackage: com.mcdonalds.superapp, platformName: android, udid: fdd1f933}, appium:deviceApiLevel: 30, appium:deviceManufacturer: OnePlus, appium:deviceModel: ONEPLUS A6000, appium:deviceName: fdd1f933, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: fdd1f933, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.8125, appium:platformVersion: 11, appium:statBarHeight: 80, appium:takesScreenshot: true, appium:udid: fdd1f933, appium:viewportRect: {height: 1986, left: 0, top: 80, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
-Session ID: 23b660cb-b192-411e-8b15-c37d6b1f3f03
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:179)
-	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:108)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:397)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:389)
-	at stepdefinations.Login.user_swipes_to_reach_login_page(Login.java:75)
-	at ?.User swipes to reach login page(file:///C:/Users/Vinay%20Kale/Desktop/Automation/DemoBDDFrameWork/src/main/java/features/Login.feature:7)
-</pre></div></td>
-<td>79</td>
-<td>runner.RunTest@34123d65</td></tr>
+<td></td>
+<td>29</td>
+<td>runner.RunTest@4802796d</td></tr>
 </table><p>
 </body>
 </html>

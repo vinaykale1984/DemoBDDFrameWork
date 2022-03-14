@@ -71,7 +71,7 @@ public class Hook {
 
 	public void setUpAppium() throws MalformedURLException, InterruptedException{
 		File f = new File("Testdata");
-		File fs = new File(f, "app-prodCA-release.apk");
+		File fs = new File(f, "app-qaUK-debug.apk");
 		
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		
@@ -81,8 +81,8 @@ public class Hook {
 		 capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 //		 capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, 11);
 //		 capabilities.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
-		 capabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"//Testdata//app-prodCA-release.apk");
-		 capabilities.setCapability("appPackage", "com.mcdonalds.superapp");
+		 capabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"//Testdata//app-qaUK-debug.apk");
+		 capabilities.setCapability("appPackage", "com.mcdonalds.app.uk.dev");
 		 capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.mcdonalds.mcdcoreapp.common.activity.SplashActivity");    
 
 		 driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
